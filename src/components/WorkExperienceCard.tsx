@@ -24,7 +24,7 @@ const WorkExperienceCard = ({ item }: Props) => {
                 <p className='font-bold text-2xl mt-1'>{item?.company}</p>
                 <div className='flex space-x-2 my-2'>
                     {(item?.technologies ?? []).map(x => (
-                        <img className='h-10 w-10 rounded-full' src={urlFor(x.image).url()} alt="" />
+                        <img key={x._id} className='h-10 w-10 rounded-full' src={urlFor(x.image).url()} alt="" />
                     ))}
                 </div>
                 <p className='uppercase py-5 text-gray-300'>
